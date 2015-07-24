@@ -13,13 +13,32 @@ class ViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var label: UILabel!
 
+  func dubble(string: String) -> Int {
+    if let i = string.toInt() {
+      return i * 2
+    }
+    return 0
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    textField.typingSignal.next {
-      string in
-      self.label.text = string
+    // This works
+    textField.typingSignal
+      .map(dubble)
+      .next {
+        i in
+        self.label.text = "\(i)"
     }
+
+    // And so does this
+//    textField.typingSignal
+//      .map { return $0.toInt() ?? 0 }
+//      .map { return $0 * 2 }
+//      .next {
+//        i in
+//        self.label.text = "\(i)"
+//    }
   }
 
   override func didReceiveMemoryWarning() {

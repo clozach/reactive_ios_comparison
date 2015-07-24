@@ -14,14 +14,22 @@ class ViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var label: UILabel!
 
+  func dubble(string: AnyObject!) -> AnyObject! {
+    if let str = string as? String, let i = str.toInt() {
+      return i * 2
+    }
+    return 0
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     textField.rac_textSignal()
       .throttle(1.0)
+      .map(dubble)
       .subscribeNextAs {
-      (string: String) in
-      self.label.text = string
+      (i: Int) in
+      self.label.text = "\(i)"
     }
   }
 

@@ -15,15 +15,34 @@ class ViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var label: UILabel!
 
+  func dubble(string: String) -> Int {
+    if let i = string.toInt() {
+      return i * 2
+    }
+    return 0
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    textField.rx_text >-
-      throttle(1.0, MainScheduler.sharedInstance) >-
-      subscribeNext {
-      string in
-      self.label.text = string
+    // This works
+    textField.rx_text
+      >- throttle(1.0, MainScheduler.sharedInstance)
+      >- map(dubble)
+      >- subscribeNext {
+        i in
+        self.label.text = "\(i)"
     }
+
+    // And so does this
+//    textField.rx_text
+//      >- throttle(1.0, MainScheduler.sharedInstance)
+//      >- map { $0.toInt() ?? 0 }
+//      >- map { $0 * 2 }
+//      >- subscribeNext {
+//        i in
+//        self.label.text = "\(i)"
+//    }
   }
 
   override func didReceiveMemoryWarning() {
