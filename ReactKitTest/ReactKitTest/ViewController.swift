@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import ReactKit
 
 class ViewController: UIViewController {
 
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var label: UILabel!
 
+  var stream: Stream<NSString?>?
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    stream = textField?.textChangedStream()
+    (label, "text") <~ stream!
+    // Why doesn't the following work?!
+    // stream! ~> (label, "text")
   }
 
   override func didReceiveMemoryWarning() {

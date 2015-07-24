@@ -15,7 +15,11 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    textField.typingSignal.next {
+      string in
+      self.label.text = string
+    }
   }
 
   override func didReceiveMemoryWarning() {

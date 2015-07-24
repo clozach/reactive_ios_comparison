@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A1BCB3DE1C30FEBCAB15F74 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A57D3410B0C8DC6D6181312 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		898362AA1B6229E900527590 /* UITextField+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898362A91B6229E900527590 /* UITextField+Signal.swift */; };
 		89D7D6251B61C33F0092402F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7D6241B61C33F0092402F /* AppDelegate.swift */; };
 		89D7D6271B61C33F0092402F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7D6261B61C33F0092402F /* ViewController.swift */; };
 		89D7D62A1B61C33F0092402F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D7D6281B61C33F0092402F /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		0D8CBBC9345718DCD6B8A10F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2A57D3410B0C8DC6D6181312 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		898362A91B6229E900527590 /* UITextField+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Signal.swift"; sourceTree = "<group>"; };
 		89D7D61F1B61C33F0092402F /* InterstellarTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterstellarTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D7D6231B61C33F0092402F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D7D6241B61C33F0092402F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				89D7D62B1B61C33F0092402F /* Images.xcassets */,
 				89D7D62D1B61C33F0092402F /* LaunchScreen.xib */,
 				89D7D6221B61C33F0092402F /* Supporting Files */,
+				898362A91B6229E900527590 /* UITextField+Signal.swift */,
 			);
 			path = InterstellarTest;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D7D6271B61C33F0092402F /* ViewController.swift in Sources */,
+				898362AA1B6229E900527590 /* UITextField+Signal.swift in Sources */,
 				89D7D6251B61C33F0092402F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

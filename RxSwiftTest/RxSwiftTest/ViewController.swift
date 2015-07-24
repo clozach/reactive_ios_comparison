@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
@@ -15,7 +17,11 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    textField.rx_text >- subscribeNext {
+      string in
+      self.label.text = string
+    }
   }
 
   override func didReceiveMemoryWarning() {
