@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sc7-qe-NuN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="dq1-dN-uzn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sc7-qe-NuN" customClass="ViewController" customModule="InterstellarTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="sbm-ze-oa8"/>
+                        <viewControllerLayoutGuide type="bottom" id="96o-Hl-AjI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Z4D-jA-exS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq2-QW-NkO">
+                                <rect key="frame" x="16" y="20" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxq-nX-c4g">
+                                <rect key="frame" x="279" y="58" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6YS-Yk-oJP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Iq2-QW-NkO" firstAttribute="trailing" secondItem="Z4D-jA-exS" secondAttribute="trailingMargin" id="AED-Ys-aNB"/>
+                            <constraint firstItem="Iq2-QW-NkO" firstAttribute="leading" secondItem="Z4D-jA-exS" secondAttribute="leadingMargin" id="KTe-xM-4Kt"/>
+                            <constraint firstItem="dxq-nX-c4g" firstAttribute="top" secondItem="Iq2-QW-NkO" secondAttribute="bottom" constant="8" id="U62-lD-Esd"/>
+                            <constraint firstItem="dxq-nX-c4g" firstAttribute="centerX" secondItem="Iq2-QW-NkO" secondAttribute="centerX" id="irW-re-aUR"/>
+                            <constraint firstItem="Iq2-QW-NkO" firstAttribute="top" secondItem="sbm-ze-oa8" secondAttribute="bottom" id="liv-Zd-6ft"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="dxq-nX-c4g" id="UwS-UO-NGp"/>
+                        <outlet property="textField" destination="Iq2-QW-NkO" id="mm7-88-9DV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bq-gl-BSC" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
