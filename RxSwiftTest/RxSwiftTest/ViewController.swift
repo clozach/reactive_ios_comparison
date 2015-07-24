@@ -18,7 +18,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    textField.rx_text >- subscribeNext {
+    textField.rx_text >-
+      throttle(1.0, MainScheduler.sharedInstance) >-
+      subscribeNext {
       string in
       self.label.text = string
     }

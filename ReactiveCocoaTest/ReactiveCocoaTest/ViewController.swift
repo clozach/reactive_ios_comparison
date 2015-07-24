@@ -17,7 +17,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    textField.rac_textSignal().subscribeNextAs {
+    textField.rac_textSignal()
+      .throttle(1.0)
+      .subscribeNextAs {
       (string: String) in
       self.label.text = string
     }

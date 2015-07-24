@@ -19,7 +19,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    stream = textField?.textChangedStream()
+    stream = textField!.textChangedStream()
+      |> throttle(1.0)
+
     (label, "text") <~ stream!
     // Why doesn't the following work?!
     // stream! ~> (label, "text")
