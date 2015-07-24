@@ -1,0 +1,10 @@
+PODS:
+  - Interstellar (1.0.0)
+
+DEPENDENCIES:
+  - Interstellar (~> 1.0)
+
+SPEC CHECKSUMS:
+  Interstellar: 5f157fd0198dbfa31e4ebd4b067f6d2a669e5bca
+
+COCOAPODS: 0.38.0.beta.2

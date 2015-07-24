@@ -1,0 +1,13 @@
+PODS:
+  - ReactKit (0.11.2):
+    - SwiftTask (~> 3.3.0)
+  - SwiftTask (3.3.1)
+
+DEPENDENCIES:
+  - ReactKit
+
+SPEC CHECKSUMS:
+  ReactKit: 826b40273ddb82e33fdc358aa19afa037f595e7e
+  SwiftTask: 0baec4571e2ea235e73817c399cde12056c81f6f
+
+COCOAPODS: 0.38.0.beta.2
